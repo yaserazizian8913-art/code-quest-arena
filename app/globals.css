@@ -1,36 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import './globals.css';
 
-:root {
-  color-scheme: dark;
+export const metadata = {
+  title: 'CodeQuest Private Classroom',
+  description: 'Secure coding classroom for teacher and students',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="fa" dir="rtl">
+      <body>{children}</body>
+    </html>
+  );
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Tahoma, sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(124, 58, 237, 0.32), transparent 25%),
-    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.22), transparent 30%),
-    #070d1f;
-  color: white;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-}
-
-::selection {
-  background: rgba(124, 58, 237, 0.45);
-}

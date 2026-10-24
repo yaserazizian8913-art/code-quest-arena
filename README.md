@@ -1,19 +1,37 @@
-# CodeQuest Class
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-This project is a private classroom portal for coding lessons and teacher-student management.
+:root {
+  color-scheme: dark;
+}
 
-## Teacher and Student Access
+html {
+  scroll-behavior: smooth;
+}
 
-- Teacher code: `TEACH-2048`
-- Student codes: `STU-001` to `STU-006`
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Tahoma, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(124, 58, 237, 0.28), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(34, 211, 238, 0.2), transparent 30%),
+    #050b1a;
+  color: white;
+}
 
-This is a prototype for a private classroom system. For real production security, it should be connected to a backend authentication system and deployed in a private environment.
+* {
+  box-sizing: border-box;
+}
 
-## Run locally
+button,
+input,
+textarea {
+  font: inherit;
+}
 
-```bash
-npm install
-npm run dev
-```
+::selection {
+  background: rgba(139, 92, 246, 0.5);
+}
 
-Then open: http://localhost:3000
